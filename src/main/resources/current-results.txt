@@ -1,0 +1,19 @@
+
+#
+# 1 million records, read file and write to db.
+#
+CHUNK:10
+MICRO SEC    SEC         MINUTES
+            1113.0080    18.5
+
+CHUNK:100
+MICRO SEC   SEC         MINUTES
+6.94493333  6.94493333  6.94493333
+
+CHUNK:500
+MICRO SEC    SEC        MINUTES
+315887000   315.8870    5.26478333
+
+#
+# 1 million records, read file, send message to kafka and write to db.
+#
