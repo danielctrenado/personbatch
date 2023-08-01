@@ -1,3 +1,4 @@
+#  groupId: groupId
 spring:
 
   #
@@ -17,11 +18,13 @@ spring:
     jdbc:
       initialize-schema: "always"
 
-
-#
-# Kafka.
-#
-kafka:
-  bootstrap-servers: localhost:9092
-  topic: quickstart-events
-  groupId: groupId
+  #
+  # kafka
+  #
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    template:
+      default-topic: quickstart-events
